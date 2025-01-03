@@ -18,6 +18,32 @@
   <li>Many elements, such as unit sizes and default values, are hardcoded for simplicity.</li>
 </ul>
 
+<h2>Calculation Formula</h2>
+<p>The application uses the following formula to calculate gas costs for each unit:</p>
+<pre>
+Gas Cost for Unit = (Total Gas Cost for All Units × Unit Area / Total Area)
+                  + (Gas for Cooking / Number of Units)
+                  + (Service Fee / Number of Units)
+</pre>
+<p>Where:</p>
+<ul>
+  <li><strong>Total Gas Cost for All Units</strong>: (Gas Used × Gas Price) - Gas for Cooking</li>
+  <li><strong>Gas for Cooking</strong>: Fixed value of 20, shared equally among all units.</li>
+  <li><strong>Unit Area</strong>: The area of the specific unit (e.g., 9.93, 15.69, etc.).</li>
+  <li><strong>Total Area</strong>: Sum of all unit areas.</li>
+</ul>
+
+<h3>Electricity and Water Costs</h3>
+<p>The costs for electricity and water are shared equally among all units:</p>
+<pre>
+Electricity or Water Cost per Unit = Total Electricity or Water Cost / Number of Units
+</pre>
+
+<h3>Total Cost</h3>
+<p>The total cost for each unit includes gas, electricity, and water:</p>
+<pre>
+Total Cost for Unit = Gas Cost for Unit + Electricity Cost per Unit + Water Cost per Unit
+</pre>
 <h2>Usage</h2>
 <ol>
   <li>Run the application via NetBeans or the command line:</li>
@@ -34,7 +60,9 @@
   This project is hardcoded and designed for personal use. Contributions or extensions may require significant customization.
 </p>
 
-<h2>Example:</h2>
-![image](https://github.com/user-attachments/assets/320eea81-c513-4d1e-a0be-1ed079e8a24c)
+<h3>Example1:</h3>
+<img src="https://github.com/user-attachments/assets/2839ed99-3277-4c5f-974c-57c6a559938f" alt="Application Screenshot" width="600">
 <br>
-![image](https://github.com/user-attachments/assets/2839ed99-3277-4c5f-974c-57c6a559938f)
+
+<h3>Example2:</h3>
+<img src="https://github.com/user-attachments/assets/320eea81-c513-4d1e-a0be-1ed079e8a24c" alt="Application Screenshot" width="600">
