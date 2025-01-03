@@ -9,7 +9,7 @@ import java.awt.Color;
 import static java.lang.Double.parseDouble;
 
 /**
- *
+ * This should be edited carefully or via netbeans
  * @author tony
  */
 public class Mokesciai extends javax.swing.JFrame {
@@ -105,8 +105,7 @@ public class Mokesciai extends javax.swing.JFrame {
         Kvadratura1.setEditable(false);
         Kvadratura1.setBackground(new java.awt.Color(215, 215, 215));
         Kvadratura1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-       // Kvadratura1.setText("10"); //plotai_kambariu = [9.93, 15.69, 16.44, 22.65]
-        Kvadratura1.setText("9.93"); //plotai_kambariu = [9.93, 15.69, 16.44, 22.65]
+        Kvadratura1.setText("9.93");
 
         Kvadratura1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +120,6 @@ public class Mokesciai extends javax.swing.JFrame {
         Kvadratura2.setEditable(false);
         Kvadratura2.setBackground(new java.awt.Color(215, 215, 215));
         Kvadratura2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-//        Kvadratura2.setText("17");
         Kvadratura2.setText("15.69");
         Kvadratura2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +134,6 @@ public class Mokesciai extends javax.swing.JFrame {
         Kvadratura3.setEditable(false);
         Kvadratura3.setBackground(new java.awt.Color(215, 215, 215));
         Kvadratura3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-//        Kvadratura3.setText("18");
         Kvadratura3.setText("16.44");
         Kvadratura3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +148,6 @@ public class Mokesciai extends javax.swing.JFrame {
         Kvadratura4.setEditable(false);
         Kvadratura4.setBackground(new java.awt.Color(215, 215, 215));
         Kvadratura4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-//        Kvadratura4.setText("24");
         Kvadratura4.setText("22.65");
         Kvadratura4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -640,23 +636,23 @@ public class Mokesciai extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void dujosElektraVanduoTotalActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void kvadratura2TotalActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void kvadratura4TotalActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void kvadratura3TotalActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void kvadratura1TotalActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void vanduoTotalActionPerformed(java.awt.event.ActionEvent evt) {
@@ -668,11 +664,11 @@ public class Mokesciai extends javax.swing.JFrame {
     }
 
     private void resDujosTotalActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void kvadratura1ResDujosActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void SkaiciuotiBtnActionPerformed(java.awt.event.ActionEvent evt) {
@@ -692,23 +688,23 @@ public class Mokesciai extends javax.swing.JFrame {
     }
 
     private void Kvadratura4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void Kvadratura3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void Kvadratura2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
 
     private void Kvadratura1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
     }
     private void start() {
 
@@ -736,13 +732,7 @@ public class Mokesciai extends javax.swing.JFrame {
             dujuKuboKaina.setForeground(Color.black);
         }
         dujosMaistuiIndividualus = dujosMaistuiBendras/4;
-
-
-//9.93, 15.69, 16.44, 22.65
-//        double dujos1 = dujuKainaKambariui(10);
-//        double dujos2 = dujuKainaKambariui(17);
-//        double dujos3 = dujuKainaKambariui(18);
-//        double dujos4 = dujuKainaKambariui(24);
+        
         double dujos1 = dujuKainaKambariui(9.93);
         double dujos2 = dujuKainaKambariui(15.69);
         double dujos3 = dujuKainaKambariui(16.44);
@@ -758,7 +748,7 @@ public class Mokesciai extends javax.swing.JFrame {
         resDujosTotal.setText("" + apvalint(isVisoDujos,2));
 
 
-        if (!elektraTotal.getText().equals("") && !vanduoTotal.getText().equals("") ){
+        if (!elektraTotal.getText().isEmpty() && !vanduoTotal.getText().isEmpty()){
             double elektra = parseDouble(elektraTotal.getText());
             double vanduo = parseDouble(vanduoTotal.getText());
             double elektraVanduoIsKeturiu = apvalint((elektra + vanduo) / 4, 2);
@@ -794,8 +784,7 @@ public class Mokesciai extends javax.swing.JFrame {
 
         try{
             parseDouble(paslaugosMokestis.getText());
-        }
-        catch (Exception x){
+        } catch (Exception x){
             validation1 = false;
             paslaugosMokestis.setForeground(Color.red);
         }
@@ -805,8 +794,7 @@ public class Mokesciai extends javax.swing.JFrame {
 
         try{
             parseDouble(dujuKuboKaina.getText());
-        }
-        catch (Exception x){
+        } catch (Exception x){
             validation2 = false;
             dujuKuboKaina.setForeground(Color.red);
         }
@@ -817,8 +805,7 @@ public class Mokesciai extends javax.swing.JFrame {
 
         try{
             parseDouble(dujuPrinaudota.getText());
-        }
-        catch (Exception x){
+        } catch (Exception x){
             validation3 = false;
             dujuPrinaudota.setForeground(Color.red);
         }
@@ -827,11 +814,10 @@ public class Mokesciai extends javax.swing.JFrame {
         }
 
 
-        try{
+        try {
             parseDouble(elektraTotal.getText());
             elektraTotal.setForeground(Color.black);
-        }
-        catch (Exception x){
+        } catch (Exception x){
 
             if (!elektraTotal.getText().equals("") && !vanduoTotal.getText().equals("")){
                 validation4 = false;
@@ -840,11 +826,11 @@ public class Mokesciai extends javax.swing.JFrame {
                 elektraTotal.setForeground(Color.black);
             }
         }
-        try{
+        
+        try {
             parseDouble(vanduoTotal.getText());
             vanduoTotal.setForeground(Color.black);
-        }
-        catch (Exception x){
+        } catch (Exception x){
 
             if (!elektraTotal.getText().equals("") && !vanduoTotal.getText().equals("")){
                 validation5 = false;
